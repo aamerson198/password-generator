@@ -12,11 +12,11 @@ var passwordText = document.querySelector("#password");
 // Write password to the #password input
 function writePassword() {
   characterChoice = prompt(
-    "Choose a number of characters between 8 and 128 to use for your custom password,"
+    "Choose a number of characters between 8 and 128 to use for your custom password."
   );
   if (characterChoice < 8 || characterChoice > 128) {
     alert(
-      "Your amount of characters should be between 8 and 128. Please choose again"
+      "Your amount of characters should be between 8 and 128. Please choose again."
     );
     writePassword();
   }
