@@ -7,7 +7,6 @@ var possibleCharacters = "";
 var password = "";
 
 var generateBtn = document.querySelector("#generate");
-var passwordText = document.querySelector("#password");
 
 // Write password to the #password input
 function writePassword() {
@@ -49,9 +48,11 @@ function writePassword() {
       possibleCharacters[Math.floor(Math.random() * possibleCharacters.length)];
   }
   console.log(password);
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+  var passwordText = document.getElementById("password");
+  passwordText.innerHTML = "";
+  passwordText.innerHTML = password;
+  possibleCharacters = [];
+  password = "";
 }
 
 function generatePassword() {
